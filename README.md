@@ -129,6 +129,70 @@ Os exemplos executáveis e configurações de cliente ficam em
 - [`cursor/`](examples/cursor/README.md)
 - [`aider/`](examples/aider/README.md)
 
+## Estrutura do repositório
+
+```text
+GitHub_Integration_Other_IAs/
+├── LICENSE                                      # Texto integral da licença Apache-2.0.
+├── README.md                                    # Guia principal em português.
+├── README.en.md                                 # Guia principal em inglês.
+│
+└── examples/
+    ├── README.md                                # Convenções comuns e matriz de suporte MCP.
+    ├── shared/
+    │   └── scripts/
+    │       └── New-SafePullRequest.ps1          # Helper comum: cria branch segura e orienta a abertura de PR.
+    │
+    ├── claude-code/
+    │   ├── README.md                            # Instruções de uso do Claude Code.
+    │   ├── config/
+    │   │   ├── mcp-stdio.json                   # Modelo Docker/stdio para o GitHub MCP Server.
+    │   │   └── mcp-remote.json                  # Modelo HTTP remoto com marcador de token local.
+    │   ├── scripts/
+    │   │   └── new-safe-pr.ps1                  # Wrapper do helper de PR identificado como Claude Code.
+    │   └── src/
+    │       └── agent-instructions.md            # Prompt de segurança e fluxo de trabalho do Claude Code.
+    │
+    ├── codex/
+    │   ├── README.md                            # Instruções de configuração do Codex.
+    │   ├── config/
+    │   │   ├── mcp-stdio.config.toml            # Configuração Docker/stdio para ~/.codex/config.toml.
+    │   │   └── mcp-remote.config.toml           # Configuração HTTP usando GITHUB_PAT_TOKEN.
+    │   ├── scripts/
+    │   │   └── new-safe-pr.ps1                  # Wrapper do helper de PR identificado como Codex.
+    │   └── src/
+    │       └── agent-instructions.md            # Prompt de segurança e fluxo de trabalho do Codex.
+    │
+    ├── gemini-cli/
+    │   ├── README.md                            # Instruções de configuração do Gemini CLI.
+    │   ├── config/
+    │   │   ├── mcp-stdio.settings.json          # Modelo Docker/stdio para settings.json do Gemini.
+    │   │   └── mcp-remote.settings.json         # Modelo HTTP remoto com a propriedade httpUrl.
+    │   ├── scripts/
+    │   │   └── new-safe-pr.ps1                  # Wrapper do helper de PR identificado como Gemini CLI.
+    │   └── src/
+    │       └── agent-instructions.md            # Prompt de segurança e fluxo de trabalho do Gemini CLI.
+    │
+    ├── cursor/
+    │   ├── README.md                            # Instruções de configuração do Cursor.
+    │   ├── config/
+    │   │   ├── mcp-stdio.json                   # Modelo Docker/stdio para .cursor/mcp.json.
+    │   │   └── mcp-remote.json                  # Modelo HTTP remoto com marcador de token local.
+    │   ├── scripts/
+    │   │   └── new-safe-pr.ps1                  # Wrapper do helper de PR identificado como Cursor.
+    │   └── src/
+    │       └── agent-instructions.md            # Prompt de segurança e fluxo de trabalho do Cursor.
+    │
+    └── aider/
+        ├── README.md                            # Limitação do Aider CLI e alternativas suportadas.
+        ├── config/
+        │   └── aiderdesk-mcp-stdio.template.json # Modelo Docker/stdio para cliente AiderDesk com MCP.
+        ├── scripts/
+        │   └── new-safe-pr.ps1                  # Wrapper do helper de PR identificado como Aider.
+        └── src/
+            └── agent-instructions.md            # Instruções para Aider com fluxo alternativo via gh CLI.
+```
+
 ## Licença
 
 Copyright (c) 2026 Aridio Silva. Este material é distribuído sob a
