@@ -118,6 +118,17 @@ a própria PR somente depois da CI ficar verde.
 - [GitHub Actions](https://docs.github.com/actions)
 - [Rulesets](https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets)
 
+## Exemplos por IA
+
+Os exemplos executáveis e configurações de cliente ficam em
+[`examples/`](examples/README.md):
+
+- [`claude-code/`](examples/claude-code/README.md)
+- [`codex/`](examples/codex/README.md)
+- [`gemini-cli/`](examples/gemini-cli/README.md)
+- [`cursor/`](examples/cursor/README.md)
+- [`aider/`](examples/aider/README.md)
+
 ## Licença
 
 Copyright (c) 2026 Aridio Silva. Este material é distribuído sob a
